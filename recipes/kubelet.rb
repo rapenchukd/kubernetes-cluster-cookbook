@@ -7,6 +7,7 @@
 
 service 'kubelet' do
   action :enable
+  not_if { node['run_list'] == 'kubernetes-cluster::master' }
 end
 
 template "#{node['kubernetes']['secure']['directory']}/kube.config" do
@@ -30,7 +31,7 @@ template '/etc/kubernetes/kubelet' do
     pause_container: node['kubelet']['pause-source'],
     kubernetes_secure_api_port: node['kubernetes']['secure']['apiport'],
     etcd_cert_dir: node['kubernetes']['secure']['directory'],
-    register_node: node['kubelet']['register']
   )
   notifies :restart, 'service[kubelet]', :immediately
+  not_if { node['run_list'] == 'kubernetes-cluster::master' }
 end
