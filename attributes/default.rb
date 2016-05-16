@@ -51,12 +51,12 @@ default['kubernetes']['log']['level'] = '5'
 # Package versions
 default['kubernetes_cluster']['package']['flannel']['version'] = '>= 0.2.0'
 default['kubernetes_cluster']['package']['docker']['name'] = 'docker'
-default['kubernetes_cluster']['package']['docker']['version'] = '= 1.8.2'
-default['kubernetes_cluster']['package']['kubernetes_client']['version'] = '= 1.0.3'
-default['kubernetes_cluster']['package']['kubernetes_master']['version'] = '= 1.0.3'
-default['kubernetes_cluster']['package']['kubernetes_node']['version'] = '= 1.0.3'
-default['kubernetes_cluster']['package']['etcd']['version'] = '>= 2.0.0'
-default['kubernetes_cluster']['package']['cockpit']['enabled'] = true
+default['kubernetes_cluster']['package']['docker']['version'] = '= 1.9.1'
+default['kubernetes_cluster']['package']['kubernetes_client']['version'] = '= 1.2.0'
+default['kubernetes_cluster']['package']['kubernetes_master']['version'] = '= 1.2.0'
+default['kubernetes_cluster']['package']['kubernetes_node']['version'] = '= 1.2.0'
+default['kubernetes_cluster']['package']['etcd']['version'] = '>= 2.2.0'
+default['kubernetes_cluster']['package']['cockpit']['enabled'] = false
 default['kubernetes_cluster']['package']['cockpit']['version'] = '>= 0.71'
 default['kubernetes_cluster']['package']['docker_registry']['version'] = '>= 0.9.1'
 default['kubernetes_cluster']['package']['bridge_utils']['version'] = '>= 1.5'

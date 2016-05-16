@@ -17,6 +17,3 @@ default['kubernetes']['master']['fqdn'] = nil
 default['kubernetes']['etcd']['client']['ca'] = nil
 default['kubernetes']['etcd']['client']['cert'] = nil
 default['kubernetes']['etcd']['client']['key'] = nil
-
-# Tell kubelet to register on minion
-default['kubelet']['register'] = 'true'
